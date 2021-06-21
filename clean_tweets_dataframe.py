@@ -20,7 +20,7 @@ class Clean_Tweets:
         """
         drop duplicate rows
         """
-        df = df['retweet_count'].drop_duplicates(keep='first')
+        df = df.drop_duplicates()
         
         return df
     def convert_to_datetime(self, df:pd.DataFrame)->pd.DataFrame:
